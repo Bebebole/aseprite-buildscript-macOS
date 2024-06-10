@@ -1,7 +1,7 @@
 #This script requires wget, cmake, ninja, git and xcode installed
 #(i really recommend you the "homebrew" package manager for this)
 
-SCRIPT_PATH="${BASH_SOURCE[0]%/*}"
+SCRIPT_PATH="$( dirname -- "$( readlink -f -- "$0"; )"; )"
 ARCH="$(uname -m)"
 
 if [ $ARCH = "x86_64" ]; then
